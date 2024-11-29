@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan and Vietnam Time</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+        .left {
+            flex: 1;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .right {
+            flex: 1;
+            background-color: lightcoral;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        h1 {
+            white-space: pre-line;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <h2>Japan time</h2>
+        <h1 id="JapanTime">This is Japan time.</h1>
+    </div>
+    <div class="right">
+        <h2>Viet time</h2>
+        <h1 id="VietnamTime">This is Vietnam time.</h1>
+    </div>
+    <script>
+        // Function to display time for a given time zone
+        function displayTimeWithTimeZone(timeZone, elementId) {
+            const now = new Date();
+            const formatter = new Intl.DateTimeFormat('en-GB', {
+                timeZone: timeZone,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+            const timeString = formatter.format(now);
+            document.getElementById(elementId).textContent = timeString;
+        }
+
+        // Update the time every second
+        function updateTimes() {
+            displayTimeWithTimeZone('Asia/Tokyo', 'JapanTime'); // Japan Time
+            displayTimeWithTimeZone('Asia/Ho_Chi_Minh', 'VietnamTime'); // Vietnam Time
+        }
+
+        // Call the function once to display time immediately
+        updateTimes();
+        
+        // Update time every second
+        setInterval(updateTimes, 1000);
+    </script>
+</body>
+</html>
