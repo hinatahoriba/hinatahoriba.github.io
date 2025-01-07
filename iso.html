@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おにぎり坊主</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            padding: 20px 0;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .image-item {
+            width: 45%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .download-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>磯くん</h1>
+    <div class="image-container">
+        <div class="image-item">
+            <img src="img/iso1.png" alt="おにぎり1">
+            <h2>iso-kun1</h2>
+            <a href="img/iso1.png" download="img/iso1.png" class="download-btn">ダウンロード</a>
+        </div>
+        <div class="image-item">
+            <img src="img/iso2.png" alt="おにぎり2">
+            <h2>iso-kun2</h2>
+            <a href="img/iso2.png" download="img/iso2.png" class="download-btn">ダウンロード</a>
+        </div>
+        <div class="image-item">
+            <img src="img/iso3.png" alt="おにぎり3">
+            <h2>磯ぎり</h2>
+            <a href="img/iso3.png" download="img/iso3.png" class="download-btn">ダウンロード</a>
+        </div>
+        <div class="image-item">
+            <img src="img/iso4.png" alt="おにぎり4">
+            <h2>中国ISO</h2>
+            <a href="img/iso4.png" download="img/iso4.png" class="download-btn">ダウンロード</a>
+        </div>
+    </div>
+</body>
+</html>
