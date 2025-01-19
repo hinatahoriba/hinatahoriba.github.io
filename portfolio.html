@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオサイト</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FBFCFF; /* ベースカラー */
+            color: #2B2721; /* テキストカラー */
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #135389; /* アクセントカラー */
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: #135389; /* アクセントカラー */
+            border-bottom: 2px solid #135389;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #135389; /* アクセントカラー */
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ポートフォリオ</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="section-title">プロフィール</h2>
+            <p>堀場日向</p>
+            <p>東京工科大学　コンピュータサインエス学部</p>
+            <p>プログラミング経験年数：3年</p>
+            <p>得意な技術：Python, Java, HTML, CSS</p>
+            <p>迅速な対応が得意です。</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">作品リスト</h2>
+            <div class="card">
+                <h3>時計</h3>
+                <p>日本とベトナムの時計です。</p>
+                <a href="https://hinatahoriba.github.io/time.html">ここをクリック</a>
+            </div>
+            <div class="card">
+                <h3>メールの自動返信</h3>
+                <p>ChatGPTへのメール作成プロンプトの自動作成</p>
+                <a href="https://hinatahoriba.github.io/mail_reply.html">ここをクリック</a>
+            </div>
+            <div class="card">
+                <h3>誕生日お祝い</h3>
+                <p>誕生日を祝うためのサイト</p>
+                <a href="https://hinatahoriba.github.io/birthday.html">ここをクリック</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 堀場日向</p>
+    </footer>
+</body>
+</html>
