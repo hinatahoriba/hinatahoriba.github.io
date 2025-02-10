@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japan Tailor-Made Travel</title>
+    <title>Custom Travel Agency - Japan Tailor-Made Travel</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,58 +11,110 @@
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
+            color: #000; /* 全体の文字色を黒に設定 */
         }
         header {
-            background-color: #ff6347;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
+            height: 60vh;
+            position: relative;
+            overflow: hidden;
         }
-        header h1 {
-            margin: 0;
+        .slide-wrapper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .slide {
+            width: 500%; /* Adjusted for 5 slides */
+            height: 100%;
+            display: flex;
+            transition: all 0.3s ease-in-out;
+        }
+        .slide div {
+            width: 20%; /* Each slide takes up 20% of the total width */
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white; /* ナビゲーションリンクは白のまま */
+            margin: 0 15px;
+            text-decoration: none;
         }
         section {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background: white;
+            background-color: white;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            color: #ff6347;
+            color: #000; /* 見出しも黒に設定 */
         }
-        ul {
+        ul, ol {
             padding-left: 20px;
         }
         li {
             margin-bottom: 10px;
         }
+        footer {
+            background:#333;color:white;text-align:center;padding:10px;margin-top:auto;}
     </style>
 </head>
 <body>
+    <!-- Slideshow Header -->
     <header>
-        <h1>Welcome to Japan Tailor-Made Travel</h1>
-        <p>Your journey, a special experience in Japan.</p>
+        <div class="slide-wrapper">
+            <div id="slide" class="slide">
+                <div><img src="image1.jpg" alt="Slide 1"></div>
+                <div><img src="image2.jpg" alt="Slide 2"></div>
+                <div><img src="image3.jpg" alt="Slide 3"></div>
+                <div><img src="image4.jpg" alt="Slide 4"></div>
+                <div><img src="image5.jpg" alt="Slide 5"></div>
+            </div>
+        </div>
     </header>
 
-    <section>
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#features">Features</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#recommended">Recommended For</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
         <h2>About Our Service</h2>
         <p>We provide fully customized travel plans for international travelers visiting Japan. From sightseeing to unique experiences and hidden gems, we create plans tailored to each customer's preferences.</p>
-        <p>"I don't know what to do in Japan," "I want a special experience," or "I want to explore efficiently"—we turn these wishes into reality.</p>
     </section>
 
-    <section>
+    <!-- Features Section -->
+    <section id="features">
         <h2>Features of Our Service</h2>
         <ul>
-            <li><strong>Fully Customized Plans:</strong> We propose one-of-a-kind travel plans based on your interests and schedule. Enjoy not only sightseeing but also local experiences and cuisine.</li>
-            <li><strong>Support from Local Experts:</strong> Professional guides living in Japan will introduce you to local information and recommended spots. Multilingual support ensures peace of mind.</li>
-            <li><strong>Access to Hidden Gems:</strong> Discover hidden spots and places known only to locals that are not listed in guidebooks. Create unforgettable memories.</li>
-            <li><strong>Stress-Free Travel:</strong> We can arrange transportation, accommodations, dining options, and more. You can focus solely on enjoying your trip.</li>
+            <li><strong>Fully Customized Plans:</strong> Enjoy personalized travel plans based on your interests and schedule.</li>
+            <li><strong>Support from Local Experts:</strong> Professional guides provide local insights and multilingual support.</li>
+            <li><strong>Access to Hidden Gems:</strong> Discover unique spots known only to locals.</li>
+            <li><strong>Stress-Free Travel:</strong> We handle all arrangements so you can focus on enjoying your trip.</li>
         </ul>
     </section>
 
-    <section>
+    <!-- Benefits Section -->
+    <section id="benefits">
         <h2>Benefits of Using Our Service</h2>
         <ul>
             <li><strong>Save Time and Effort:</strong> Leave all the planning and arrangements to us.</li>
@@ -71,8 +123,9 @@
         </ul>
     </section>
 
-    <section>
-        <h2>Recommended For:</h2>
+    <!-- Recommended For Section -->
+    <section id="recommended">
+        <h2>Recommended For</h2>
         <ul>
             <li>First-time visitors to Japan</li>
             <li>Those interested in Japanese culture and history</li>
@@ -81,20 +134,25 @@
         </ul>
     </section>
 
-    <section>
+    <!-- How It Works Section -->
+    <section id="how-it-works">
         <h2>How It Works</h2>
         <ol>
             <li><strong>Inquiry & Consultation:</strong> Share your preferences, budget, and travel schedule with us.</li>
-            <li><strong>Plan Proposal:</strong> Based on your input, we will propose the best tailor-made plan for you.</li>
-            <li><strong>Booking & Arrangements:</strong> Once the plan is finalized, we will handle accommodations, transportation, activities, and more.</li>
-            <li><strong>Enjoy Your Trip!</strong>: With full support on-site, you can relax and enjoy your journey in Japan.</li>
+            <li><strong>Plan Proposal:</strong> We propose the best tailor-made plan for you.</li>
+            <li><strong>Booking & Arrangements:</strong> We handle accommodations, transportation, activities, and more.</li>
+            <li><strong>Enjoy Your Trip!</strong>: Relax and enjoy your journey with full support on-site.</li>
         </ol>
     </section>
 
-    <section>
-        <h2>Pricing</h2>
-        <p>The cost varies depending on your preferences and schedule. Please feel free to contact us for details.</p>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to start planning your trip, feel free to reach out!</p>
+        <button onclick="alert('Thank you for reaching out!')">Get in Touch</button>
     </section>
 
-</body>
-</html>
+    <!-- Footer -->
+    <footer style="color:white;">
+       &copy; ©2025 Custom Travel Agency | Japan Tailor-Made Travel
+   </footer>
