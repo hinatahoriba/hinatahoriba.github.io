@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桜</title>
+    <style>
+        html, body, a {
+            cursor: none;
+            background-image: url('../gif/flower.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #custom-cursor {
+            position: fixed;
+            z-index: 1000;
+            pointer-events: none;
+            transform: scale(0.2);
+            transform-origin: center center;
+        }
+
+        .cursor {
+            display: none;
+        }
+
+        #bgm-control {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px 30px;
+            background-color: rgba(255, 192, 203, 0.8);
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <div class="cursor"></div>
+    <img id="custom-cursor" src="img/mouse_bao.png" alt="カスタムカーソル">
+    <audio id="bgm" src="music/RSP - さくら～あなたに出会えてよかった～.webm" loop></audio>
+    <button id="bgm-control">▶</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const customCursor = document.getElementById('custom-cursor');
+            const bgm = document.getElementById('bgm');
+            const bgmControl = document.getElementById('bgm-control');
+
+            document.addEventListener('mousemove', (e) => {
+                const cursorWidth = customCursor.offsetWidth;
+                const cursorHeight = customCursor.offsetHeight;
+                customCursor.style.top = `${e.clientY - cursorHeight / 2}px`;
+                customCursor.style.left = `${e.clientX - cursorWidth / 2}px`;
+            });
+
+            bgmControl.addEventListener('click', () => {
+                if (bgm.paused) {
+                    bgm.play();
+                    bgmControl.textContent = '⏸';
+                } else {
+                    bgm.pause();
+                    bgmControl.textContent = '▶';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
